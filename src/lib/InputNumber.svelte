@@ -27,7 +27,7 @@
   {#if label}
     <label for={id}>{label}</label>
   {/if}
-  <input type="number" id={id} placeholder={placeholder} step={step} max={max} min={min} on:input={handleInput}/>
+  <input type="number" inputmode="numeric" id={id} placeholder={placeholder} step={step} max={max} min={min} on:input={handleInput}/>
 </div>
 
 <style>
