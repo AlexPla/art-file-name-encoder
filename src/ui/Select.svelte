@@ -1,24 +1,24 @@
 <script context="module">
-  let counter = 0
+  let counter = 0;
 </script>
+
 <script lang="ts">
-  export let value;
-  export let options: { value: string, label: string }[];
+  export let value: string;
+  export let options: {value: string; label: string}[];
   export let label: string;
-  export let placeholder: string;
+  export let placeholder: string = 'Seleccione una opción';
 
-  let id = `select_${counter++}`
-
-  const change = (event: Event) => {
-    value = event.target.value;
-  }
+  let id = `select_${counter++}`;
 </script>
 
 <div>
   {#if label}
     <label for={id}>{label}</label>
   {/if}
-  <select id={id} placeholder={placeholder} on:change={change}>
+  <select bind:value {id} {placeholder}>
+    {#if value === undefined}
+      <option value={undefined} disabled selected hidden>{placeholder}</option>
+    {/if}
     {#each options as option}
       <option value={option.value}>{option.label}</option>
     {/each}
