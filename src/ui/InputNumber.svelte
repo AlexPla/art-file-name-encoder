@@ -28,11 +28,12 @@
   $: if (inputField) inputField.value = value;
 </script>
 
-<div>
+<fieldset class="flex flex-col gap-2 justify-end">
   {#if label}
     <label for={id}>{label}</label>
   {/if}
   <input
+    class="form-input focus:border-red-800 focus:ring-red-800"
     type="number"
     inputmode="numeric"
     {id}
@@ -43,18 +44,4 @@
     bind:this={inputField}
     on:input={handleInput}
   />
-</div>
-
-<style>
-  div {
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  input {
-    width: 100%;
-    box-sizing: border-box;
-  }
-</style>
+</fieldset>

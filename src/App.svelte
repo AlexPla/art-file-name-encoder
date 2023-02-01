@@ -15,11 +15,15 @@
   import Result from './components/Result.svelte';
 </script>
 
-<header>
-  <h1>Codificador de nombres de archivos</h1>
+<header class="flex justify-center p-4 border-b border-gray-300">
+  <h1 class="text-3xl text-center text-gray-800 uppercase">
+    Codificador de nombres de archivos
+  </h1>
 </header>
-<main>
-  <form>
+<main class="bg-gray-100 py-8 text-gray-800">
+  <form
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-10 mx-10"
+  >
     <OriginSelector />
     <DocumentTypeSelect />
     {#if $origin === 'internal'}
@@ -41,55 +45,6 @@
         <UniquePieceIdentifierInput />
       {/if}
     {/if}
-    <br />
-    <Result />
   </form>
+  <Result />
 </main>
-
-<style>
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  form {
-    max-width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2rem;
-  }
-
-  .result {
-    place-items: center;
-    padding: 1rem;
-    background-color: maroon;
-    border-radius: 1rem;
-    border: 1px solid white;
-  }
-
-  .tooltip-container {
-    position: relative;
-  }
-
-  .tooltip {
-    position: absolute;
-    top: -150%;
-    padding: 1rem;
-    border-radius: 1rem;
-    background-color: white;
-    color: #242424;
-  }
-
-  .tooltip::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: white transparent transparent transparent;
-  }
-</style>

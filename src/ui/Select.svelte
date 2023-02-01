@@ -11,11 +11,16 @@
   let id = `select_${counter++}`;
 </script>
 
-<div>
+<fieldset class="flex flex-col gap-2 justify-end">
   {#if label}
     <label for={id}>{label}</label>
   {/if}
-  <select bind:value {id} {placeholder}>
+  <select
+    class="form-select focus:border-red-800 focus:ring-red-800"
+    bind:value
+    {id}
+    {placeholder}
+  >
     {#if value === undefined}
       <option value={undefined} disabled selected hidden>{placeholder}</option>
     {/if}
@@ -23,17 +28,4 @@
       <option value={option.value}>{option.label}</option>
     {/each}
   </select>
-</div>
-
-<style>
-  div {
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  select {
-    width: 100%;
-  }
-</style>
+</fieldset>
