@@ -1,6 +1,6 @@
 <script lang="ts">
   import Select from '../ui/Select.svelte';
-  import {lightSource} from '../store';
+  import {lightSource} from '../stores/store';
   import type {Option} from '../types/forms';
 
   const options: Option[] = [

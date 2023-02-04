@@ -1,6 +1,6 @@
 <script lang="ts">
   import InputNumber from '../ui/InputNumber.svelte';
-  import {temporalPieceNumber} from '../store';
+  import {temporalPieceNumber} from '../stores/store';
   import {onDestroy} from 'svelte';
 
   onDestroy(() => {

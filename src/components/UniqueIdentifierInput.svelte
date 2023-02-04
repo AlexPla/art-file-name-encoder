@@ -1,6 +1,6 @@
 <script lang="ts">
   import InputNumber from '../ui/InputNumber.svelte';
-  import {uniqueIdentifier} from '../store';
+  import {uniqueIdentifier} from '../stores/store';
 </script>
 
 <InputNumber

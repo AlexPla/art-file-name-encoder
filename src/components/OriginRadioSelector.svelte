@@ -1,5 +1,5 @@
 <script lang="ts">
-  import {origin} from '../store';
+  import {origin} from '../stores/store';
   import type {Option} from '../types/forms';
   import Radio from '../ui/Radio.svelte';
 

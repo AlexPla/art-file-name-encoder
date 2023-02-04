@@ -28,7 +28,7 @@
   $: if (inputField) inputField.value = value;
 </script>
 
-<fieldset class="flex flex-col gap-2 justify-end">
+<fieldset class="flex flex-col justify-end gap-2">
   {#if label}
     <label for={id}>{label}</label>
   {/if}

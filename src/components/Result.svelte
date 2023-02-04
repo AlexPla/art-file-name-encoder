@@ -13,7 +13,7 @@
     year,
     temporalPieceNumber,
     uniquePieceIdentifier,
-  } from '../store';
+  } from '../stores/store';
 
   let typeValue = '';
   $: typeValue = $type === '-' ? '' : $type;
@@ -52,15 +52,15 @@
   let hasBeenCopied = false;
 </script>
 
-<section class="flex justify-center mt-16">
+<section class="mt-16 flex justify-center">
   <div
-    class="flex flex-col gap-4 border-2 border-red-800 bg-white p-10 relative shadow-md drop-shadow-md"
+    class="relative flex flex-col gap-4 border-2 border-red-800 bg-white p-10 shadow-md drop-shadow-md"
   >
     <h2 class="text-xl">{value}</h2>
     <div class="flex justify-center">
       <button
         id="copy-button"
-        class="bg-red-800 text-white px-4 py-2 text-sm font-bold"
+        class="bg-red-800 px-4 py-2 text-sm font-bold text-white"
         type="button"
         on:click={() => {
           navigator.clipboard.writeText(value);
@@ -73,7 +73,7 @@
         COPIAR
       </button>
       {#if hasBeenCopied}
-        <div class="absolute flex justify-center top-32 text-sm">
+        <div class="absolute top-32 flex justify-center text-sm">
           <span class="text-center">Copiado en el portapapeles</span>
         </div>
       {/if}

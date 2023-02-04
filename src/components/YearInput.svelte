@@ -1,6 +1,6 @@
 <script lang="ts">
   import InputNumber from '../ui/InputNumber.svelte';
-  import {year} from '../store';
+  import {year} from '../stores/store';
 </script>
 
 <InputNumber

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import {origin, type} from './store';
+  import {origin, type} from './stores/store';
   import OriginSelector from './components/OriginRadioSelector.svelte';
   import DocumentTypeSelect from './components/DocumentTypeSelect.svelte';
   import CatalogNumberInput from './components/CatalogNumberInput.svelte';
@@ -15,14 +15,14 @@
   import Result from './components/Result.svelte';
 </script>
 
-<header class="flex justify-center p-4 border-b border-gray-300">
-  <h1 class="text-3xl text-center text-gray-800 uppercase">
+<header class="flex justify-center border-b border-gray-300 p-4">
+  <h1 class="text-center text-3xl uppercase text-gray-800">
     Codificador de nombres de archivos
   </h1>
 </header>
 <main class="bg-gray-100 py-8 text-gray-800">
   <form
-    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-10 mx-10"
+    class="mx-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4"
   >
     <OriginSelector />
     <DocumentTypeSelect />

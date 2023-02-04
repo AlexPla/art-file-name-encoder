@@ -2,7 +2,7 @@
   import {onDestroy} from 'svelte';
   import Select from '../ui/Select.svelte';
   import type {Option} from '../types/forms';
-  import {origin, type} from '../store';
+  import {origin, type} from '../stores/store';
 
   const allOptions: (Option & {type: 'external' | 'internal'})[] = [
     {value: 'P', label: 'P - Colección Pintura', type: 'internal'},

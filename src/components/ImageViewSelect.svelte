@@ -1,6 +1,6 @@
 <script lang="ts">
   import Select from '../ui/Select.svelte';
-  import {imageView} from '../store';
+  import {imageView} from '../stores/store';
   import type {Option} from '../types/forms';
 
   const options: Option[] = [

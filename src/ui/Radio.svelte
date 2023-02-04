@@ -11,7 +11,7 @@
   };
 </script>
 
-<fieldset class="flex felx-col justify-end" on:change={onChange}>
+<fieldset class="felx-col flex justify-end" on:change={onChange}>
   {#if legend}
     <legend>{legend}</legend>
   {/if}

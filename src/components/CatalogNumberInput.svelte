@@ -1,7 +1,7 @@
 <script lang="ts">
   import {get} from 'svelte/store';
   import InputNumber from '../ui/InputNumber.svelte';
-  import {type, catalogNumber} from '../store';
+  import {type, catalogNumber} from '../stores/store';
 
   catalogNumber.set('');
 
